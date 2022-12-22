@@ -1,7 +1,8 @@
 import React from 'react'
-import {  Input, Select } from 'antd'
 import ProjectTable from "../Components/ProjectTable";
 import Projectmodal from "../Components/Projectmodal";
+import { Button, Input, Select } from 'antd'
+
 export default function Project() {
     //select选择器的回调函数
     const handleChange = (value) => {
@@ -15,7 +16,13 @@ export default function Project() {
         <div className="project_body_wrap">
             <div className="project_title_wrap">
                 <h2>项目列表</h2>
+
                 <Projectmodal />
+
+                <Button type="link" block className="project_button_wrap">
+                    创建项目
+                </Button>
+
             </div>
             <div className="project_input_wrap">
                 <Input

@@ -38,24 +38,40 @@
 }
 
 /* layout布局 */
-.layout_wrap {
+
+.layout_wrap{
+
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.header_wrap {
+
+
+
+.header_wrap{
+
   width: 100%;
   display: flex;
   height: 60px;
   /* background-color: #61dafb; */
+
 }
 .layout_wrap_project {
   height: 100%;
   width: 100%;
   display: flex;
 }
-.project_side_menu_wrap {
+
+.layout_wrap_project{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  
+  
+}
+.project_side_menu_wrap{
+
   width: 160px;
   height: 100%;
   /* background-color: blueviolet; */
@@ -63,28 +79,48 @@
   box-sizing: border-box;
 }
 
+
 .project_wrap {
   flex: 1;
   height: 100%;
   /* background-color: yellow; */
 }
 /* header样式 */
-.header_wrap_body {
+
+
+.project_wrap{
+   flex: 1;
+   height: 100%;
+   /* background-color: yellow; */
+}
+/* header样式 */
+.header_wrap_body{
+
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 .header_wrap_left {
   display: flex;
   justify-content: center;
 }
-.header_button {
+
+ 
+
+.header_wrap_left{
+  display: flex;
+  justify-content: center;
+}
+.header_button{
+
   display: flex;
   justify-content: center;
   line-height: 60px;
   margin-right: 20px;
   margin-left: 10px;
+
 }
 .header_button h2 {
   margin-left: 5px;
@@ -93,39 +129,67 @@
   height: 60px;
   line-height: 67px;
 }
-.header_wrap_logout {
+
+
+
+.header_button h2{
+margin-left: 5px;
+}
+.header_button>span{
+  height: 60px;
+  line-height: 67px;
+}
+ .header_wrap_logout{
+
   width: 200px;
   height: 60px;
   line-height: 60px;
   text-align: center;
+
 }
-.header_wrap_crew {
+
+.header_wrap_crew{
+
   height: 60px;
   line-height: 60px;
   display: flex;
   justify-content: center;
+
 }
 .projectButton {
   margin-right: 10px;
 }
 
 /* project样式 */
-.project_title_wrap {
+
+
+.projectButton{
+  margin-right: 10px;
+}
+/* project样式 */
+.project_title_wrap{
+
   width: 100%;
   height: 50px;
   display: flex;
   justify-content: space-between;
 }
-.project_title_wrap h2 {
+
+.project_title_wrap h2{
+
   margin-left: 10px;
   width: 200px;
   line-height: 50px;
 }
-.project_button_wrap {
+
+
+.project_button_wrap{
+
   width: 150px !important;
   height: 50px;
   line-height: 50px;
   padding: 0 !important;
+
 }
 .project_button_wrap span {
   height: 40px;
@@ -243,3 +307,18 @@
 .new_task_btn{
   margin: 0 auto;
 }
+
+  
+
+.project_button_wrap span{
+  height: 40px;
+  line-height: 48px;
+}
+.project_input_wrap{
+  margin-bottom: 30px;
+}
+.project_body_wrap{
+  padding: 30px;
+  
+}
+

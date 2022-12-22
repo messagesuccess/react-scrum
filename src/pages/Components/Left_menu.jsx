@@ -1,18 +1,17 @@
-
 import React,{useState,useEffect} from 'react'
 import {  useLocation,useNavigate} from "react-router-dom";
 import { Menu } from 'antd'
 function getItem(label, key, icon, children, type) {
-    return {
-        key,
+    return  {key,
         icon,
         children,
         label,
-        type
+        type}
     }
-}
+
 const items = [
     getItem('看板', 'kanban'),
+
     getItem('任务组', 'epic'),
    
 ]
@@ -43,6 +42,7 @@ export default function LeftMenu() {
             mode="vertical"
             items={items}
            
+
             />
         </div>
     )

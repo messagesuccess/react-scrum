@@ -17,16 +17,25 @@ const changeIconColor = (record) => {
 }
 const items = [
     {
-        key: '1',
-        label: '编辑'
+      label: (
+        <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+          编辑
+        </a>
+      ),
+      key: '0',
     },
     {
-        key: '2',
-        label: '删除'
+      label: (
+        <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+          删除
+        </a>
+      ),
+      key: '1',
     }
-]
+  ];
 const columns = [
     {
+
         title: '收藏',
         dataIndex: 'star',
         render: (text, record) => (
@@ -37,13 +46,16 @@ const columns = [
             </div>
         ),
 
+
         width: '8%'
     },
     {
         title: '名称',
         dataIndex: 'name',
         width: '32%',
+
         render: (text) => <Link to='/project/1/kanban'>{text}</Link>,
+
         sorter: {
             compare: (a, b) => a.chinese - b.chinese,
             multiple: 3
@@ -68,12 +80,13 @@ const columns = [
         title: '',
         render: (text) => (
             <Dropdown
-                menu={{
-                    items
-                }}
+            menu={{
+                items
+            }}
             >
                 <a onClick={(e) => e.preventDefault()} href="javascript">
                     <Space>...</Space>
+
                 </a>
             </Dropdown>
         ),
@@ -82,12 +95,14 @@ const columns = [
     }
 ]
 
+
 export default function ProjectTable() {
     const data = useSelector(projectSelector)
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getProjectListAsync())
     }, [])
+
     return (
         <div className="projectTable">
             <Space
@@ -99,9 +114,12 @@ export default function ProjectTable() {
             <Table
                 pagination={{ defaultPageSize: 10 }}
                 // scroll={{ y: 390 }}
+
                 loading={data.loading}
                 columns={columns}
                 dataSource={data.data}
+
+               
             />
         </div>
     )
